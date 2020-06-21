@@ -1,5 +1,11 @@
 # my-docker-registry
-My Docker Registry Configurations
+My Docker Registry Configurations based on Joxit's docker-registry-ui.
+
+## Tools
+1. Docker
+2. NGINX
+3. Image registry:2
+4. Image nginx
 
 ## Deploy for Production
 ### Deploy Docker Registry
@@ -24,7 +30,6 @@ My Docker Registry Configurations
     sudo ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf
     sudo systemctl restart nginx
     ```
-
 ### Deploy Web UI
 1. Copy docker-registry-ui to /var/www
     ``` sh
@@ -37,6 +42,7 @@ My Docker Registry Configurations
     sudo ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf
     sudo systemctl restart nginx
     ```
+
 
 ## Deploy for Development
 ### Deploy Docker Registry
@@ -61,3 +67,8 @@ My Docker Registry Configurations
     docker build -t nginx-test .
     docker run --name mynginxui -p 80:80 -d nginx-test
     ```
+
+## Thank You
+Thank you for Joxit and the community for creating this awesome web ui.  
+This is the link if you guys want to check out the web ui.  
+https://github.com/Joxit/docker-registry-ui  
