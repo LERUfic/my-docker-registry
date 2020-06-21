@@ -1,0 +1,35 @@
+{
+  "name": "docker-registry-ui",
+  "version": "1.4.9",
+  "scripts": {
+    "build": "./node_modules/gulp/bin/gulp.js build",
+    "build:electron": "npm run build && cd examples/electron && npm install && npm run dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Joxit/docker-registry-ui.git"
+  },
+  "author": "Jones Magloire (Joxit)",
+  "license": "AGPL-3.0",
+  "description": "A web UI for private docker registry",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^2.0.0",
+    "gulp-inject-version": "^1.0.1",
+    "gulp-license": "^1.1.0",
+    "gulp-riot": "^1.1.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref": "^3.1.6",
+    "riot": "^3.13.2",
+    "riot-mui": "^0.1.1",
+    "riot-route": "^3.1.4",
+    "stream-series": "^0.1.1",
+    "uglify-es": "^3.3.10"
+  }
+}
