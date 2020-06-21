@@ -31,7 +31,12 @@ My Docker Registry Configurations
     mkdir /var/www/webuiregistry
     sudo cp -r docker-registry-ui /var/www/webuiregistry
     ```
-2. [WIP]
+2. Setup NGINX
+    ``` sh
+    sudo cp docker-registry-ui/nginx.conf /etc/nginx/site-availabe/nginx.conf
+    sudo ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf
+    sudo systemctl restart nginx
+    ```
 
 ## Deploy for Development
 ### Deploy Docker Registry
@@ -51,8 +56,8 @@ My Docker Registry Configurations
     ```
 ### Deploy Web UI
 1. Setup NGINX service using docker
-``` sh
-cd docker-registry-ui
-docker build -t nginx-test .
-docker run --name mynginxui -p 80:80 -d nginx-test
-```
+    ``` sh
+    cd docker-registry-ui
+    docker build -t nginx-test .
+    docker run --name mynginxui -p 80:80 -d nginx-test
+    ```
