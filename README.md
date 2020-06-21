@@ -65,6 +65,7 @@ My Docker Registry Configurations based on Joxit's docker-registry-ui.
 1. Setup NGINX service using docker
     ``` sh
     cd docker-registry-ui
+    npm install
     docker build -t nginx-test .
     docker run --name mynginxui -p 80:80 -d nginx-test
     ```
