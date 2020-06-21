@@ -35,6 +35,7 @@ My Docker Registry Configurations based on Joxit's docker-registry-ui.
     ``` sh
     mkdir /var/www/webuiregistry
     sudo cp -r docker-registry-ui /var/www/webuiregistry
+    sudo npm install
     ```
 2. Setup NGINX
     ``` sh
