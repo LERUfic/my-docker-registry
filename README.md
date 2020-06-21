@@ -70,7 +70,17 @@ My Docker Registry Configurations based on Joxit's docker-registry-ui.
     docker run --name mynginxui -p 80:80 -d nginx-test
     ```
 
+
+## Deleting Tag on Image
+1. Using *regtool.sh*
+    ``` sh
+    ./regtool.sh https://registry.aguelsatria.web.id delete REPO_NAME TAG_NAME
+    ```
+2. Cleanup with garbage collector. Make use you change USER:PASSWORD with your user pass
+    ``` sh
+    bash gc.sh
+    ```
+
 ## Thank You
-Thank you for Joxit and the community for creating this awesome web ui.  
-This is the link if you guys want to check out the web ui.  
-https://github.com/Joxit/docker-registry-ui  
+1. Joxit/docker-registry-ui - Web ui for docker registry - https://github.com/Joxit/docker-registry-ui  
+2. Byrnedo/docker-reg-tool - Helper for listing and deleting image - https://github.com/byrnedo/docker-reg-tool  
